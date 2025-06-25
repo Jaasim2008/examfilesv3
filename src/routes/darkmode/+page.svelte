@@ -3,18 +3,40 @@
     <link rel="stylesheet" href="./css/socials-cta.css">
 </svelte:head>
 
-<script>
+<script lang="ts">
     import { examFiles } from "$stores/examfiles";
     import { getFilename } from "$lib";
     import Filter from "$lib/filter.svelte";
+    import { currentFilters } from "$lib/currentFilters"; // Import the currentFilters store
 
-     $: files = $examFiles;
+    interface ExamFile {
+        Year: number;
+        'Class/Subject': string;
+        QP?: string;
+        MS?: string; // Added MS based on your HTML usage
+    }
+
+    // Declare a variable to hold the filtered files
+    let files: ExamFile[] = [];
+
+    // Reactive declaration to filter files based on examFiles and currentFilters store
+    $: {
+        // $examFiles automatically subscribes to examFiles
+        // $currentFilters automatically subscribes to currentFilters
+        files = $examFiles.filter((file: ExamFile) => {
+            // Get the current values from the currentFilters store
+            const filters = $currentFilters;
+
+            return (
+                (!filters.year || file.Year === filters.year) &&
+                (!filters.sub || file['Class/Subject'] === filters.sub) &&
+                (!filters.qp || (file.QP && filters.qp && file.QP.toLowerCase().includes(filters.qp.toLowerCase())))
+            );
+        });
+    }
 </script>
 
-<!-- DARK MODE -->
-<!-- Body -->
 <div>
-<!-- Side Menu -->
 <section class="hidden md:inline fixed grid grid-rows-3 right-0 mr-6 bg-dark-secondary gap-1 border border-t-0 divide-y divide-dark-primary rounded-b-md border-dark-primary">
     <a href="/" rel="external" class="cursor-pointer p-1 flex gap-1 items-center"><img class="w-[28px] invert" src="/assets/icons/moon.svg" alt=""> Light/Dark Mode</a>
     <a href="/darkmode/aboutme" class="p-1 flex gap-1 items-center"><img class="w-[28px] invert" src="assets/icons/person.svg" alt=""> About Me</a>
@@ -25,7 +47,6 @@
     <h1 class="text-4xl font-extrabold text-center mb-2">CBSE Previous Year Papers</h1>
     <p class="text-dark-accent italic text-center mb-10">No Sign Up | No OTP | No Ads | Solved | One-Click Download</p>
     
-    <!-- Filters -->
     <div class="max-w-3xl mx-auto">
         <Filter darkmode={true} />
 
@@ -40,12 +61,24 @@
                 </tr>
                 </thead>
                 <tbody>
-                   {#each files as file}
+                    {#each files as file}
                         <tr class="border-b border-gray-700">
                             <td class="border border-gray-700 px-4 py-2">{ file.Year }</td>
                             <td class="border border-gray-700 px-4 py-2">{ file['Class/Subject'] }</td>
-                            <td class="border border-gray-700 px-4 py-2"><a href={file.QP} class="text-dark-primary underline hover:text-dark-accent" target="_blank">{ getFilename(file.QP) }</a></td>
-                            <td class="border border-gray-700 px-4 py-2"><a href={file.MS} class="text-dark-primary underline hover:text-dark-accent" target="_blank">{ getFilename(file.MS) }</a></td>
+                            <td class="border border-gray-700 px-4 py-2">
+                                {#if file.QP}
+                                    <a href={file.QP} class="text-dark-primary underline hover:text-dark-accent" target="_blank">{ getFilename(file.QP) }</a>
+                                {:else}
+                                    N/A
+                                {/if}
+                            </td>
+                            <td class="border border-gray-700 px-4 py-2">
+                                {#if file.MS}
+                                    <a href={file.MS} class="text-dark-primary underline hover:text-dark-accent" target="_blank">{ getFilename(file.MS) }</a>
+                                {:else}
+                                    N/A
+                                {/if}
+                            </td>
                         </tr>
                     {/each}
                     {#if files.length === 0}
@@ -57,7 +90,6 @@
         </div>
     </div>
 </main>
-<!-- Socials CTA -->
 <section class="z-20 fixed right-0 top-[50%] hidden md:grid grid-cols-2 bg-dark-secondary gap-1 border border-r-0 rounded-s-lg border-dark-primary" dir="ltr">
     <div class="p-1 grid grid-rows-3 gap-2">
         <a href="#"><img id="whatsappicon" class="w-[28px] invert transition-filter" src="assets/icons/whatsapp.svg" alt=""></a>
@@ -66,8 +98,6 @@
     </div>
     <div class="p-1 border-l border-white flex items-center"><p class="[writing-mode:vertical-lr]">Share Me!</p></div>
 </section>
-<!-- Mobile Socials CTA -->
-<!-- TODO: Link up the links -->
 <section class="grid grid-cols-4 justify-items-center md:hidden text-sm border-t bg-dark-secondary rounded-md rounded-b-none p-2 border-dark-primary">
     <img class="w-[20px]" src="assets/frostyicons/share.svg" alt="Share:">
     <a href="#"><img id="whatsappicon" class="w-[20px] invert transition-filter" src="assets/icons/whatsapp.svg" alt="Whatsapp"></a>
