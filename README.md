@@ -1,38 +1,22 @@
-# sv
+![Logo](https://github.com/Jaasim2008/examfilesv3/blob/b5ee4ed25269dc8de26fc39ab95efe3e6fafd74b/static/assets/media/examfiles-banner-light.png)
+A public repository of CBSE board exam papers.
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Technical Specifications
 
-## Creating a project
+ - Written in sveltekit (a really cool framework)
+ - Not vibe coded
+ - Backend developed in supabase (PostgreSQL) (Bucket)
+ - Not that much comments (sorry)
+ 
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Known Bugs
 
-```bash
-# create a new project in the current directory
-npx sv create
+ - Year and Class/Subject Filter default option not showing
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Future Plans
 
-## Developing
+ - Add zipped file features
+ - Add more themes
+## I want to submit files
+upload zip to [here](https://docs.google.com/forms/d/e/1FAIpQLSfr7BboeJc2vb-FYA9wj7n9EOJu8Lkfer0eqRkjqMrh2I7jLg/viewform?usp=dialog)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
