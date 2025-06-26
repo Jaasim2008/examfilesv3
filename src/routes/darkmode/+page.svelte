@@ -1,6 +1,12 @@
 <svelte:head>
     <title>Examfiles</title>
     <meta name="description" content="Download CBSE Board Papers in One Click | No Sign Up">
+    <meta property="og:title" content="ExamFiles Darkmode">
+    <meta property="og:description" content="Download CBSE Board Papers in One Click | No Sign Up | Solved">
+    <meta property="og:image" content="https://examfiles.net/assets/media/examfiles-banner-dark.png">
+    <meta property="og:url" content="https://examfiles.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ExamFiles">
     <link rel="stylesheet" href="./css/socials-cta.css">
 </svelte:head>
 
