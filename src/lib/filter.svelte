@@ -32,7 +32,6 @@
     onMount(async () => {
         await getOptions();
         toRenderOptions = get(filteringOptionsStore);
-        console.log('toRenderOptions:', toRenderOptions);
 
         // Get initial filter values from URL and set local variables
         // This makes sure filters are applied if someone opens a URL with filters

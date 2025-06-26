@@ -17,6 +17,7 @@
     import { currentFilters } from "$lib/currentFilters"; // Import the currentFilters store
     import FloatingMenu from "$lib/floatingMenu.svelte";
     import Footer from "$lib/footer.svelte";
+    import Copylink from "$lib/copylink.svelte";
 
     interface ExamFile {
         Year: number;
@@ -100,7 +101,7 @@
     <div class="p-1 grid grid-rows-3 gap-2">
         <a href="https://api.whatsapp.com/send?text=examfiles.net" target="_blank"><img id="whatsappicon" class="w-[28px] invert transition-filter" src="assets/icons/whatsapp.svg" alt=""></a>
         <a href="https://www.facebook.com/sharer/sharer.php?u=examfiles.net" target="_blank"><img id="facebookicon" class="w-[28px] invert transition-filter" src="assets/icons/facebook.svg" alt=""></a>
-        <a href="#"><img id="copylinkicon" class="w-[28px] invert transition-filter" src="assets/icons/copylink.svg" alt=""></a>
+        <Copylink imageWidth=28 />
     </div>
     <div class="p-1 border-l border-white flex items-center"><p class="[writing-mode:vertical-lr]">Share Me!</p></div>
 </section>
@@ -108,7 +109,7 @@
     <img class="w-[20px]" src="assets/frostyicons/share.svg" alt="Share:">
     <a href="https://api.whatsapp.com/send?text=examfiles.net" target="_blank"><img id="whatsappicon" class="w-[20px] invert transition-filter" src="assets/icons/whatsapp.svg" alt="Whatsapp"></a>
     <a href="https://www.facebook.com/sharer/sharer.php?u=examfiles.net" target="_blank"><img id="facebookicon" class="w-[20px] invert transition-filter" src="assets/icons/facebook.svg" alt="Facebook"></a>
-    <a href="#"><img id="copylinkicon" class="w-[20px] invert transition-filter" src="assets/icons/copylink.svg" alt="Copy link"></a>
+    <Copylink imageWidth=20 />
 </section>
 <Footer darkmode={true}/>
 </div>
