@@ -1,5 +1,6 @@
 <svelte:head>
     <title>Examfiles</title>
+    <meta name="description" content="Download CBSE Board Papers in One Click | No Sign Up">
     <link rel="stylesheet" href="./css/socials-cta.css">
 </svelte:head>
 
