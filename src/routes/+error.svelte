@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Error :(</title>
+</svelte:head>
+
 <script>
 	import { page } from '$app/state';
     export let error;

@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>About Me</title>
+</svelte:head>
+
 <script lang="ts">
     import { supabase } from "$lib/supabaseClient";
     import { onMount } from "svelte";
@@ -36,6 +40,7 @@
 		"Who am I?",
 		"Why is this free?",
 		"Why is this in pink color? Are you a female?",
+		"Is this open source?",
 		"How can contact you?",
 		"What is going on with the file names?"
 	] as title, index}
@@ -55,18 +60,19 @@
 					<p>
 						One day; when I wanted to find 2025 board papers, I spent 20 mins looking for it and the answer key.
 						Also many sites needed me to sign up and verify, it just felt like too much hassle to find two PDFs,
-						so I created this.<br />
-						Also the hosting is free, so this is free. You can
-						<a class="text-primary underline" href="#">support me</a> by the way.
+						so I created this.<br />You can
+						<a class="text-primary underline" href="https://buymeacoffee.com/jaazim">support me</a> by the way.
 					</p>
 				{:else if index === 2}
 					<p>no, I just like purple with black (change theme)</p>
 				{:else if index === 3}
+					<p>Yeah, this is open source, <a class="text-primary underline" href="https://github.com/Jaasim2008/examfilesv3">examfilesv3</a></p>
+				{:else if index === 4}
 					<p>
-						<a class="text-primary underline" href="mailto:jazztgblive@gmail.com">jazztgblive@gmail.com</a><br />
+						<a class="text-primary underline" href="mailto:jazztgblive@gmail.com" target="_blank">jazztgblive@gmail.com</a><br />
 						<span class="italic">please report any broken PDFs/links</span>
 					</p>
-				{:else if index === 4}
+				{:else if index === 5}
 					<p>
 						It is weird because of file indexing, let me explain:<br />
 						The first character (number) is used for denoting which year:<br />
