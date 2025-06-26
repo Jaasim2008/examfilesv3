@@ -9,6 +9,7 @@
     import Filter from "$lib/filter.svelte";
     import { currentFilters } from "$lib/currentFilters"; // Import the currentFilters store
     import FloatingMenu from "$lib/floatingMenu.svelte";
+    import Footer from "$lib/footer.svelte";
 
     interface ExamFile {
         Year: number;
@@ -83,35 +84,31 @@
                     {/if}
                 </tbody>
             </table>
-            <a class="text-dark-primary underline" href="/zips">Download Subject (zip)</a>
+            <!-- TODO implement zip -->
+            <!-- <a class="text-dark-primary underline" href="/zips">Download Subject (zip)</a> -->
         </div>
     </div>
 </main>
 <section class="z-20 fixed right-0 top-[50%] hidden md:grid grid-cols-2 bg-dark-secondary gap-1 border border-r-0 rounded-s-lg border-dark-primary" dir="ltr">
     <div class="p-1 grid grid-rows-3 gap-2">
-        <a href="#"><img id="whatsappicon" class="w-[28px] invert transition-filter" src="assets/icons/whatsapp.svg" alt=""></a>
-        <a href="#"><img id="facebookicon" class="w-[28px] invert transition-filter" src="assets/icons/facebook.svg" alt=""></a>
+        <a href="https://api.whatsapp.com/send?text=examfiles.net" target="_blank"><img id="whatsappicon" class="w-[28px] invert transition-filter" src="assets/icons/whatsapp.svg" alt=""></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=examfiles.net" target="_blank"><img id="facebookicon" class="w-[28px] invert transition-filter" src="assets/icons/facebook.svg" alt=""></a>
         <a href="#"><img id="copylinkicon" class="w-[28px] invert transition-filter" src="assets/icons/copylink.svg" alt=""></a>
     </div>
     <div class="p-1 border-l border-white flex items-center"><p class="[writing-mode:vertical-lr]">Share Me!</p></div>
 </section>
 <section class="grid grid-cols-4 justify-items-center md:hidden text-sm border-t bg-dark-secondary rounded-md rounded-b-none p-2 border-dark-primary">
     <img class="w-[20px]" src="assets/frostyicons/share.svg" alt="Share:">
-    <a href="#"><img id="whatsappicon" class="w-[20px] invert transition-filter" src="assets/icons/whatsapp.svg" alt="Whatsapp"></a>
-    <a href="#"><img id="facebookicon" class="w-[20px] invert transition-filter" src="assets/icons/facebook.svg" alt="Facebook"></a>
+    <a href="https://api.whatsapp.com/send?text=examfiles.net" target="_blank"><img id="whatsappicon" class="w-[20px] invert transition-filter" src="assets/icons/whatsapp.svg" alt="Whatsapp"></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=examfiles.net" target="_blank"><img id="facebookicon" class="w-[20px] invert transition-filter" src="assets/icons/facebook.svg" alt="Facebook"></a>
     <a href="#"><img id="copylinkicon" class="w-[20px] invert transition-filter" src="assets/icons/copylink.svg" alt="Copy link"></a>
 </section>
-<footer class="grid grid-cols-2 grid-rows-2 grid-flow-col pb-1 md:hidden flex justify-center items-center bg-dark-secondary gap-1 text-sm border-t border-dark-primary">
-    <a href="/" rel="external" class="p-1 hover:text-dark-secondary flex gap-1 items-center justify-center"><img class="w-[20px] invert" src="assets/icons/moon.svg" alt=""> Light/Dark Mode</a>
-    <a class="p-1 flex gap-1 items-center justify-center" href='/frosty'><img class="w-[20px] invert" src="assets/icons/theme.svg" alt=""> Switch Theme</a>
-    <a href="/darkmode/aboutme" class="p-1 hover:text-dark-secondary flex gap-1 items-center justify-center"><img class="w-[20px] invert" src="assets/icons/person.svg" alt=""> About Me</a>
-    <a href="https://buymeacoffee.com/jaazim" target="_blank" class="p-1 hover:text-dark-secondary flex gap-1 items-center justify-center"><img class="w-[20px] invert" src="assets/icons/heart.svg" alt=""> Support Me</a>
-</footer>
+<Footer darkmode={true}/>
 </div>
 
 <style>
 :global(body) {
-    background-color: var(--color-dark-background);
-    color: var(--color-dark-text);
+    background-color: var(--color-dark-background) !important;
+    color: var(--color-dark-text) !important;
 }
 </style>
