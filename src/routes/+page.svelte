@@ -7,6 +7,7 @@
     import { getFilename } from "$lib";
     import { currentFilters } from "$lib/currentFilters";
     import Filter from "$lib/filter.svelte";
+    import FloatingMenu from "$lib/floatingMenu.svelte";
     import { examFiles } from "$stores/examfiles";
 
     interface ExamFile {
@@ -40,13 +41,9 @@
     }
 </script>
 
+<!-- LIGHT MDOE -->
 <div>
-<section class="hidden md:inline fixed grid grid-rows-3 right-0 mr-6 bg-secondary gap-1 border border-t-0 divide-y divide-primary rounded-b-md border-primary">
-    <a href="/darkmode" rel="external" class="cursor-pointer p-1 flex gap-1 items-center"><img class="w-[28px] invert" src="/assets/icons/moon.svg" alt=""> Light/Dark Mode</a>
-    <a href="/aboutme" class="p-1 flex gap-1 items-center"><img class="w-[28px] invert" src="assets/icons/person.svg" alt=""> About Me</a>
-    <a href="https://buymeacoffee.com/jaazim" target="_blank" class="p-1 flex gap-1 items-center"><img class="w-[28px] invert" src="assets/icons/heart.svg" alt=""> Support Me</a>
-    <a href="/frosty" class="cursor-pointer p-1 flex gap-1 items-center w-full"><img class="w-[28px] invert" src="assets/icons/theme.svg" alt=""> Switch Theme</a>
-</section>
+<FloatingMenu />
 <main class="p-10 flex-grow">
     <h1 class="text-4xl font-extrabold text-center mb-2">CBSE Previous Year Papers</h1>
     <p class="text-accent italic text-center mb-10">No Sign Up | No OTP | No Ads | Solved | One-Click Download</p>

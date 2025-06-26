@@ -8,6 +8,7 @@
     import { getFilename } from "$lib";
     import Filter from "$lib/filter.svelte";
     import { currentFilters } from "$lib/currentFilters"; // Import the currentFilters store
+    import FloatingMenu from "$lib/floatingMenu.svelte";
 
     interface ExamFile {
         Year: number;
@@ -36,13 +37,9 @@
     }
 </script>
 
+<!-- DAKR MODE -->
 <div>
-<section class="hidden md:inline fixed grid grid-rows-3 right-0 mr-6 bg-dark-secondary gap-1 border border-t-0 divide-y divide-dark-primary rounded-b-md border-dark-primary">
-    <a href="/" rel="external" class="cursor-pointer p-1 flex gap-1 items-center"><img class="w-[28px] invert" src="/assets/icons/moon.svg" alt=""> Light/Dark Mode</a>
-    <a href="/darkmode/aboutme" class="p-1 flex gap-1 items-center"><img class="w-[28px] invert" src="assets/icons/person.svg" alt=""> About Me</a>
-    <a href="https://buymeacoffee.com/jaazim" target="_blank" class="p-1 flex gap-1 items-center"><img class="w-[28px] invert" src="assets/icons/heart.svg" alt=""> Support Me</a>
-    <a href="/frosty" class="cursor-pointer p-1 flex gap-1 items-center w-full"><img class="w-[28px] invert" src="assets/icons/theme.svg" alt=""> Switch Theme</a>
-</section>
+<FloatingMenu darkmode={true} />
 <main class="p-10 flex-grow">
     <h1 class="text-4xl font-extrabold text-center mb-2">CBSE Previous Year Papers</h1>
     <p class="text-dark-accent italic text-center mb-10">No Sign Up | No OTP | No Ads | Solved | One-Click Download</p>
