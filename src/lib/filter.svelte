@@ -76,13 +76,13 @@
     }
 </script>
 
-<div class="flex flex-wrap items-center gap-4 mb-10 pl-2">
-    <label class="text-lg">Filter:</label>
+<div class="flex md:flex-nowrap flex-wrap items-center gap-4 mb-10 pl-2">
+    <label class="md:text-lg">Filter:</label>
     <select
         name="year"
         bind:value={selectedYear}
         on:change={updateUrlParams}
-        class={`${darkmode? 'bg-dark-secondary' : 'bg-secondary'} text-white px-2 py-1 rounded`}
+        class={`${darkmode? 'bg-dark-secondary' : 'bg-secondary'} text-white px-2 py-1 rounded text-sm md:text-base`}
     >
         <option value="">All Years</option>
         {#each toRenderOptions.distinctYears as option}
@@ -94,7 +94,7 @@
         name="sub"
         bind:value={selectedSub}
         on:change={updateUrlParams}
-        class={`${darkmode? 'bg-dark-secondary' : 'bg-secondary'} text-white px-2 py-1 rounded grow`}
+        class={`${darkmode? 'bg-dark-secondary' : 'bg-secondary'} text-white px-2 py-1 rounded grow text-sm md:text-base`}
     >
         <option value="">All Subjects</option>
         {#each toRenderOptions.distinctClassSubject as option}
@@ -108,8 +108,8 @@
         placeholder="Search QP filename..."
         bind:value={searchQP}
         on:input={updateUrlParams}
-        class={`text-white placeholder-slate-100 px-2 py-1 rounded border ${darkmode ? 'bg-dark-secondary' : 'bg-secondary'} ${darkmode ? 'border-dark-primary' : 'border-primary'}`}
+        class={`text-white placeholder-slate-100 px-2 py-1 rounded border ${darkmode ? 'bg-dark-secondary' : 'bg-secondary'} ${darkmode ? 'border-dark-primary' : 'border-primary'} text-sm md:text-base`}
     />
-    <button type="button" class={`${darkmode ? 'bg-dark-primary' : 'bg-primary'} text-white px-4 py-1 rounded ${darkmode ? 'hover:bg-dark-secondary' : 'hover:bg-secondary'} transition cursor-pointer`}>Apply</button>
-    <button on:click={clearFilters} type="button" class={`text-sm ${darkmode ? 'text-dark-primary' : 'text-primary'} ${darkmode ? 'text-dark-secondary' : 'text-secondary'} underline`}>Clear</button>
+    <button type="button" class={`${darkmode ? 'bg-dark-primary' : 'bg-primary'} text-white px-4 py-1 rounded ${darkmode ? 'hover:bg-dark-secondary' : 'hover:bg-secondary'} transition cursor-pointer text-sm md:text-base`}>Apply</button>
+    <button on:click={clearFilters} type="button" class={`text-sm ${darkmode ? 'text-dark-primary' : 'text-primary'} ${darkmode ? 'text-dark-secondary' : 'text-secondary'} underline text-xs md:text-base`}>Clear</button>
 </div>

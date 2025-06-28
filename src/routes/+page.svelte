@@ -54,14 +54,14 @@
 <div>
 <FloatingMenu darkmode={false}/>
 <main class="p-10 flex-grow">
-    <h1 class="text-4xl font-extrabold text-center mb-2">CBSE Previous Year Papers</h1>
-    <p class="text-accent italic text-center mb-10">No Sign Up | No OTP | No Ads | Solved | One-Click Download</p>
+    <h1 class="text-2xl md:text-4xl font-extrabold text-center mb-2">CBSE Previous Year Papers</h1>
+    <p class="text-sm md:text-base text-accent italic text-center mb-10">No Sign Up | No OTP | No Ads | Solved | One-Click Download</p>
     
     <div class="max-w-3xl mx-auto">
         <Filter darkmode={false} /> <div class="overflow-y-auto max-h-[calc(100vh-200px)] md:overflow-visible text-center">
             <table class="min-w-full table-auto border-collapse border border-gray-700 text-left">
                 <thead>
-                <tr class="">
+                <tr class="text-sm md:text-base">
                     <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-secondary text-white">Year</th>
                     <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-secondary text-white">Class/Subject</th>
                     <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-secondary text-white">QP</th>
@@ -70,7 +70,7 @@
                 </thead>
                 <tbody>
                     {#each files as file}
-                        <tr class="border-b border-gray-700">
+                        <tr class="border-b border-gray-700 text-xs md:text-base">
                             <td class="border border-gray-700 px-4 py-2">{ file.Year }</td>
                             <td class="border border-gray-700 px-4 py-2">{ file['Class/Subject'] }</td>
                             <td class="border border-gray-700 px-4 py-2">
