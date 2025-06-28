@@ -36,6 +36,7 @@
 </style>
 
 <div class="p-10 text-lg grid grid-cols-1 gap-6 md:w-4/6 mx-auto">
+	<img class="md:w-2/6 justify-self-center" src="assets/media/examfiles-banner-light.png" alt="Banner">
 	{#each [
 		"Who am I?",
 		"Why is this free?",

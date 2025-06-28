@@ -36,6 +36,7 @@
 </style>
 
 <div class="p-10 text-lg grid grid-cols-1 gap-6 md:w-4/6 mx-auto">
+	<img class="md:w-2/6 justify-self-center" src="/assets/media/examfiles-banner-dark.png" alt="Banner">
 	{#each [
 		"Who am I?",
 		"Why is this free?",
@@ -66,7 +67,7 @@
 				{:else if index === 2}
 					<p>no, I just like purple with black (change theme)</p>
 				{:else if index === 3}
-					<p>Yeah, this is open source, <a class="text-primary underline" href="https://github.com/Jaasim2008/examfilesv3" target="_blank">examfilesv3</a></p>
+					<p>Yeah, this is open source, <a class="text-dark-primary underline" href="https://github.com/Jaasim2008/examfilesv3" target="_blank">examfilesv3</a></p>
 				{:else if index === 4}
 					<p>
 						<a class="text-dark-primary underline" href="mailto:jazztgblive@gmail.com">jazztgblive@gmail.com</a><br />
