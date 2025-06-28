@@ -62,7 +62,7 @@
 						One day; when I wanted to find 2025 board papers, I spent 20 mins looking for it and the answer key.
 						Also many sites needed me to sign up and verify, it just felt like too much hassle to find two PDFs,
 						so I created this.<br />You can
-						<a class="text-primary underline" href="https://buymeacoffee.com/jaazim">support me</a> by the way.
+						<a class="text-primary underline" href="https://patreon.com/Jaasim?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">support me</a> by the way.
 					</p>
 				{:else if index === 2}
 					<p>no, I just like purple with black (change theme)</p>
