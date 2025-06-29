@@ -58,7 +58,8 @@
     <p class="text-sm md:text-base text-accent italic text-center mb-10">No Sign Up | No OTP | No Ads | Solved | One-Click Download</p>
     
     <div class="max-w-3xl mx-auto">
-        <Filter darkmode={false} /> <div class="overflow-y-auto max-h-[calc(100vh-200px)] md:overflow-visible text-center">
+        <Filter darkmode={false} />
+        <div class="overflow-y-auto max-h-[calc(100vh-200px)] md:overflow-visible text-center">
             <table class="min-w-full table-auto border-collapse border border-gray-700 text-left">
                 <thead>
                 <tr class="text-sm md:text-base">
@@ -70,17 +71,17 @@
                 </thead>
                 <tbody>
                     {#each files as file}
-                        <tr class="border-b border-gray-700 text-xs md:text-base">
+                        <tr class="border-b border-gray-700 text-xs font-light md:font-normal md:text-base">
                             <td class="border border-gray-700 px-4 py-2">{ file.Year }</td>
                             <td class="border border-gray-700 px-4 py-2">{ file['Class/Subject'] }</td>
-                            <td class="border border-gray-700 px-4 py-2">
+                            <td class="border border-gray-700 px-4 py-2 text-nowrap md:text-wrap">
                                 {#if file.QP}
                                     <a href={file.QP} class="text-primary underline hover:text-accent" target="_blank">{ getFilename(file.QP) }</a>
                                 {:else}
                                     N/A
                                 {/if}
                             </td>
-                            <td class="border border-gray-700 px-4 py-2">
+                            <td class="border border-gray-700 px-4 py-2 text-nowrap md:text-wrap">
                                 {#if file.MS}
                                     <a href={file.MS} class="text-primary underline hover:text-accent" target="_blank">{ getFilename(file.MS) }</a>
                                 {:else}

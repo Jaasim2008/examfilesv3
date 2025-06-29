@@ -114,7 +114,7 @@
                 name="qp"
                 bind:value={searchQP}
                 on:input={updateUrlParams}
-                class={`text-white placeholder-slate-100 px-2 py-1.5 md:py-1 rounded ${darkmode ? 'bg-dark-secondary' : 'bg-secondary'} text-sm md:text-base w-4/6`}
+                class={`text-white placeholder-slate-100 px-2 py-0.5 md:py-1 rounded ${darkmode ? 'bg-dark-secondary' : 'bg-secondary'} text-sm md:text-base w-4/6`}
             />
         </div>
     </div>

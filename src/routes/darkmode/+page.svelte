@@ -68,17 +68,17 @@
                 </thead>
                 <tbody>
                     {#each files as file}
-                        <tr class="border-b border-gray-700 text-xs md:text-base">
+                        <tr class="border-b border-gray-700 text-xs font-light md:font-normal md:text-base">
                             <td class="border border-gray-700 px-4 py-2">{ file.Year }</td>
                             <td class="border border-gray-700 px-4 py-2">{ file['Class/Subject'] }</td>
-                            <td class="border border-gray-700 px-4 py-2">
+                            <td class="border border-gray-700 px-4 py-2 text-nowrap md:text-wrap">
                                 {#if file.QP}
                                     <a href={file.QP} class="text-dark-primary underline hover:text-dark-accent" target="_blank">{ getFilename(file.QP) }</a>
                                 {:else}
                                     N/A
                                 {/if}
                             </td>
-                            <td class="border border-gray-700 px-4 py-2">
+                            <td class="border border-gray-700 px-4 py-2 text-nowrap md:text-wrap">
                                 {#if file.MS}
                                     <a href={file.MS} class="text-dark-primary underline hover:text-dark-accent" target="_blank">{ getFilename(file.MS) }</a>
                                 {:else}
