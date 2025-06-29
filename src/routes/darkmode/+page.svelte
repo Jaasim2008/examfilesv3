@@ -62,8 +62,8 @@
                 <tr class="text-sm md:text-base">
                     <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-dark-secondary text-white">Year</th>
                     <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-dark-secondary text-white">Class/Subject</th>
-                    <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-dark-secondary text-white">QP</th>
-                    <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-dark-secondary text-white">MS</th>
+                    <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-dark-secondary text-white cursor-help" title="Question Paper">QP</th>
+                    <th class="sticky top-0 border border-gray-700 px-4 py-2 text-left bg-dark-secondary text-white cursor-help" title="Marking Scheme">MS</th>
                 </tr>
                 </thead>
                 <tbody>
