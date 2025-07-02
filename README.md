@@ -15,7 +15,6 @@ A public repository of CBSE board exam papers.
 
 ## Future Plans
 
- - Floating Menu for Filters (Mobile)
  - Add zipped file features
  - Add more themes (Material UI maybe)
 ## I want to submit files
