@@ -107,7 +107,7 @@
     <div class="p-1 border-l border-white flex items-center"><p class="[writing-mode:vertical-lr]">Share Me!</p></div>
 </section>
 <!-- Socials CTA Button (Mobile) -->
- <section class="absolute bottom-0 w-full>
+ <section class="absolute bottom-0 w-full">
      <section class="grid grid-cols-4 justify-items-center md:hidden text-sm border-t bg-dark-secondary rounded-md rounded-b-none p-2 border-dark-primary">
          <img class="w-[20px]" src="assets/frostyicons/share.svg" alt="Share:">
          <a href="https://api.whatsapp.com/send?text=examfiles.net" target="_blank"><img id="whatsappicon" class="w-[20px] invert transition-filter" src="assets/icons/whatsapp.svg" alt="Whatsapp"></a>
