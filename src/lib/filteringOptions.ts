@@ -14,8 +14,11 @@ async function getDistinctYears() {
 async function getDistinctClassSubject() {
     const { data, error } = await supabase.from('main').select('"Class/Subject"');
     if (!error) {
-        uniqueClassSubject = [...new Set(data.map(row => row["Class/Subject"]))];
-    } else {console.error(`filteringOptions.ts:getDistinctClassSubject() -> ${error}`)}
+        let tempUniqueClassSubject = [...new Set(data.map(row => row["Class/Subject"]))];
+        uniqueClassSubject = tempUniqueClassSubject.sort(); 
+    } else {
+        console.error(`filteringOptions.ts:getDistinctClassSubject() -> ${error}`);
+    }
 }
 
 let finalThingToWrite = {};
