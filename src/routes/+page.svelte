@@ -59,7 +59,7 @@
     
     <div class="max-w-3xl mx-auto">
         <Filter darkmode={false} />
-        <div class="h-[70vh] overflow-y-auto md:h-auto md:overflow-visible text-center">
+        <div class="h-[60vh] overflow-y-auto md:h-auto md:overflow-visible text-center">
             <table class="min-w-full table-auto border-collapse border border-gray-700 text-left">
                 <thead>
                 <tr class="text-sm md:text-base">
