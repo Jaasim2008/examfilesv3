@@ -56,7 +56,7 @@
     <div class="max-w-3xl mx-auto">
         <Filter darkmode={true} />
 
-        <div class="overflow-y-auto max-h-[calc(100vh-200px)] md:overflow-visible text-center">
+        <div class="h-[70vh] overflow-y-auto md:h-auto md:overflow-visible text-center">
             <table class="min-w-full table-auto border-collapse border border-gray-700 text-left mb-4">
                 <thead>
                 <tr class="text-sm md:text-base">
@@ -97,6 +97,7 @@
         </div>
     </div>
 </main>
+<!-- Socials CTA Button (Desktop) -->
 <section class="z-20 fixed right-0 top-[50%] hidden md:grid grid-cols-2 bg-dark-secondary gap-1 border border-r-0 rounded-s-lg border-dark-primary" dir="ltr">
     <div class="p-1 grid grid-rows-3 gap-2">
         <a href="https://api.whatsapp.com/send?text=examfiles.net" target="_blank"><img id="whatsappicon" class="w-[28px] invert transition-filter" src="assets/icons/whatsapp.svg" alt=""></a>
@@ -105,13 +106,16 @@
     </div>
     <div class="p-1 border-l border-white flex items-center"><p class="[writing-mode:vertical-lr]">Share Me!</p></div>
 </section>
-<section class="grid grid-cols-4 justify-items-center md:hidden text-sm border-t bg-dark-secondary rounded-md rounded-b-none p-2 border-dark-primary">
-    <img class="w-[20px]" src="assets/frostyicons/share.svg" alt="Share:">
-    <a href="https://api.whatsapp.com/send?text=examfiles.net" target="_blank"><img id="whatsappicon" class="w-[20px] invert transition-filter" src="assets/icons/whatsapp.svg" alt="Whatsapp"></a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=examfiles.net" target="_blank"><img id="facebookicon" class="w-[20px] invert transition-filter" src="assets/icons/facebook.svg" alt="Facebook"></a>
-    <Copylink imageWidth=20 />
-</section>
-<Footer darkmode={true}/>
+<!-- Socials CTA Button (Mobile) -->
+ <section class="absolute bottom-0 w-full>
+     <section class="grid grid-cols-4 justify-items-center md:hidden text-sm border-t bg-dark-secondary rounded-md rounded-b-none p-2 border-dark-primary">
+         <img class="w-[20px]" src="assets/frostyicons/share.svg" alt="Share:">
+         <a href="https://api.whatsapp.com/send?text=examfiles.net" target="_blank"><img id="whatsappicon" class="w-[20px] invert transition-filter" src="assets/icons/whatsapp.svg" alt="Whatsapp"></a>
+         <a href="https://www.facebook.com/sharer/sharer.php?u=examfiles.net" target="_blank"><img id="facebookicon" class="w-[20px] invert transition-filter" src="assets/icons/facebook.svg" alt="Facebook"></a>
+         <Copylink imageWidth=20 />
+     </section>
+     <Footer darkmode={true}/>
+ </section>
 </div>
 
 <style>
