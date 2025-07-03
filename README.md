@@ -15,9 +15,8 @@ A public repository of CBSE board exam papers.
 
 ## Future Plans
 
- - Floating Menu for Filters (Mobile)
  - Add zipped file features
- - Add more themes
+ - Add more themes (Material UI maybe)
 ## I want to submit files
 upload zip to [here](https://docs.google.com/forms/d/e/1FAIpQLSfr7BboeJc2vb-FYA9wj7n9EOJu8Lkfer0eqRkjqMrh2I7jLg/viewform?usp=dialog)
 
