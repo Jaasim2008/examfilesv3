@@ -50,8 +50,8 @@
 <div>
 <FloatingMenu darkmode={true} />
 <main class="p-10 flex-grow">
-    <h1 class="text-2xl md:text-4xl font-extrabold text-center mb-2">CBSE Previous Year Papers</h1>
-    <p class="text-sm md:text-base text-dark-accent italic text-center mb-10">No Sign Up | No OTP | No Ads | Solved | One-Click Download</p>
+    <h1 class="text-2xl md:text-4xl font-extrabold text-center mb-1 md:mb-2">CBSE Previous Year Papers</h1>
+    <p class="text-sm md:text-base text-dark-accent italic text-center mb-4 md:mb-10">No Sign Up | No OTP | No Ads | Solved | One-Click Download</p>
     
     <div class="max-w-3xl mx-auto">
         <Filter darkmode={true} />
