@@ -52,6 +52,7 @@
         url.searchParams.delete('sub');
         url.searchParams.delete('qp');
         window.history.replaceState({}, '', url.toString());
+        changeOutline()
     }
 
     // Function to update URL search params based on current filter state
@@ -124,6 +125,14 @@
         };
     });
 
+    // UI Feedback - Outline color change
+    let outlineInFeedbackMode: boolean = false;
+    async function changeOutline() {
+        outlineInFeedbackMode = true;
+        setTimeout(() => {
+            outlineInFeedbackMode = false;
+        }, 1000);
+    }
 </script>
 
 <!-- Floating Menu -->
@@ -134,7 +143,13 @@
 <!-- Mobile Filter -->
 {#if isMobile && showMobileFilter}
     <section bind:this={filterPopupWrapper} class={`fixed inset-0 flex items-end ${darkmode ? 'bg-dark/10' : 'bg-white/10'} border border-white/20 shadow-lg z-50`}>
-        <div bind:this={filterPopup} class={`w-full h-[60vh] text-md p-2 px-6 gap-4 flex flex-col ${darkmode ? 'bg-dark-background'  :'bg-background'} rounded-t-md outline ${darkmode ? 'outline-dark-primary'  : 'outline-primary'}`}>
+        <div
+            bind:this={filterPopup}
+            class={`w-full h-[60vh] text-md p-2 px-6 gap-4 flex flex-col rounded-t-md outline outline-2 ${darkmode ? 'bg-dark-background' : 'bg-background'}`}
+            class:outline-green-400={outlineInFeedbackMode}
+            class:outline-primary={!darkmode && !outlineInFeedbackMode}
+            class:outline-dark-primary={darkmode && !outlineInFeedbackMode}
+        >
             <!-- Header -->
             <div class="flex justify-between items-center mb-4"><h2 class="text-2xl font-bold text-pretty">Filters:</h2><button on:click={closeFilter} class={`text-sm ${darkmode ? 'text-slate-400' : 'text-slate-700'}`}>Close</button></div>
             <!-- Year Selector -->
@@ -180,7 +195,7 @@
               </div>
               <!-- Apply/Clear Buttons -->
                <div class="flex gap-6">
-                    <button type="button" class={`${darkmode ? 'bg-dark-primary' : 'bg-primary'} text-white px-4 py-1 rounded ${darkmode ? 'hover:bg-dark-secondary' : 'hover:bg-secondary'} transition cursor-pointer `}>Apply</button>
+                    <button on:click={changeOutline} type="button" class={`${darkmode ? 'bg-dark-primary' : 'bg-primary'} text-white px-4 py-1 rounded ${darkmode ? 'hover:bg-dark-secondary' : 'hover:bg-secondary'} transition cursor-pointer `}>Apply</button>
                     <button on:click={clearFilters} type="button" class={`text-sm ${darkmode ? 'text-dark-primary' : 'text-primary'} ${darkmode ? 'text-dark-secondary' : 'text-secondary'} underline text-sm`}>Clear</button>
                </div>
         </div>
