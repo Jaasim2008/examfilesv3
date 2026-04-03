@@ -56,7 +56,7 @@
 			<div class="accordion-content px-4" style="max-height: {openIndex === index ? 'full' : '0px'}; padding-top: {openIndex === index ? '1rem' : '0'}; padding-bottom: {openIndex === index ? '1rem' : '0'}">
 				<!-- Content for each panel -->
 				{#if index === 0}
-					<p>I'm just a 17 yr old in senior high who does a bit of web dev</p>
+					<p>Heya, I'm Hameed Jaasim. I like programming websites because I have nothing else to do productive.</p>
 				{:else if index === 1}
 					<p>
 						One day; when I wanted to find 2025 board papers, I spent 20 mins looking for it and the answer key.
